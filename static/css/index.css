@@ -1,0 +1,32 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-container {
+    text-align: center;
+}
+
+.centrar-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+h3{
+    color: darkorange;
+    font-weight: bold;
+}
+
+.container {
+    margin: 10px 0;  /* Agrega un espacio entre las secciones si es necesario */
+}
+
+img {
+    max-width: 300px;  /* ajusta el ancho máximo según tus necesidades */
+    height: auto;
+}
+
