@@ -5,18 +5,10 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(0, 0, 0);
 }
 
-.vertical-container {
-    text-align: center;
-}
-
-.centrar-img img {
-    max-width: 100%;
-    height: auto;
-}
-
-h3{
+h2{
     color: darkorange;
     font-weight: bold;
 }
@@ -26,7 +18,26 @@ h3{
 }
 
 img {
-    max-width: 300px;  /* ajusta el ancho máximo según tus necesidades */
+    max-width: 700px;  /* ajusta el ancho máximo según tus necesidades */
     height: auto;
 }
 
+.shutter-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Cambia el valor alpha según tu preferencia */
+    z-index: 1000;
+}
+
+.shutter-link {
+    position: relative;
+    z-index: 1001;
+}
+
+.shutter-link.active + .shutter-overlay {
+    display: block;
+}

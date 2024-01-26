@@ -11,25 +11,37 @@
 </head>
 
 <body>
-    <div class="vertical-container">
-        <div>
-            <h3>BT PHOTO</h3>
+    <div class="container mx-auto text-center">
+        <div class="row">
+            <div >
+                <h2>BT PHOTO</h2>
+            </div>
+            <div class="row">
+                <div>
+                    <a href="{{ url_for('home') }}" class="shutter-link"><img src="{{ url_for('static', filename='img/326705437_1361997627944281_8558405969671320208_n.jpg') }}" alt="" /></a>
+                </div>
+            </div>
+            <div class="row">
+                <div >
+                    <a href="{{ url_for('home') }}" class="shutter-link">ENTRAR</a>
+                </div>
+            </div>
+            <div class="shutter-overlay"></div>
         </div>
-
-        <div class="container centrar-img">
-            <img src="{{ url_for('static', filename='img/326705437_1361997627944281_8558405969671320208_n.jpg') }}"
-                alt="" />
-        </div>
-        <div>
-            <a href="{{ url_for('home') }}">ENTRAR</a>
-        </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-            crossorigin="anonymous"></script>
-
-    </div>
-
+    </div>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const shutterLink = document.querySelector(".shutter-link");
+            
+                shutterLink.addEventListener("click", function(e) {
+                    e.preventDefault();  // Evitar que el enlace redireccione
+                    document.body.classList.toggle("shutter-active");
+                });
+            });
+        </script>
 </body>
 
 </html>
