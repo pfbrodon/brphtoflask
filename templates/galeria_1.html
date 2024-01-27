@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/galeria_1.css') }}">
+{% extends 'layout.html' %} {% block body %}
+<br>
+<br>
+<br>
+<br>
+<H1>Galeria 1</H1>
+<!--<div class="galeria">
+    {% for imagen in imagenes %}
+        <img src="{{ url_for('static', filename='images/' + imagen) }}" alt="{{ imagen }}">
+    {% endfor %}
+</div>-->
+<div id="imagenCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        {% for imagen in imagenes %}
+            <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+                <img src="{{ url_for('static', filename='images/' + imagen) }}" class="d-block w-100" alt="{{ imagen }}">
+            </div>
+        {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#imagenCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#imagenCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+{%endblock%}
