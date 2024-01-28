@@ -1,4 +1,18 @@
 img {
-    max-width: 400px;  /* ajusta el ancho máximo según tus necesidades */
+    max-width: 500px;  /* ajusta el ancho máximo según tus necesidades */
     height: auto;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.col{
+    text-align: center;
+}
+
+.carousel-inner{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }

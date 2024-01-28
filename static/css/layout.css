@@ -1,9 +1,9 @@
 
 body {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 main {
-    background-color:black; /* Cambia el color según tus preferencias */
+    background-color:rgb(255, 255, 255); /* Cambia el color según tus preferencias */
     padding: 20px; /* Ajusta el relleno según tus necesidades */
 }
 
