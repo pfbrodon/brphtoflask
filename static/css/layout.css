@@ -1,18 +1,20 @@
 
 body {
-    background-color: rgb(0, 0, 0);
+    font-family: "Sukhumvit Set", sans-serif;
+    background-color: rgb(44, 44, 44);
 }
 main {
-    background-color:rgb(0, 0, 0); /* Cambia el color según tus preferencias */
+    font-family: "Sukhumvit Set", sans-serif;
+    background-color:rgb(44, 44, 44); /* Cambia el color según tus preferencias */
     padding: 20px; /* Ajusta el relleno según tus necesidades */
 }
 
 .navbar {
-    height: 110px; /* Ajusta la altura según tus necesidades */
+    height: 100px; /* Ajusta la altura según tus necesidades */
 }
 
 .custom-navbar {
-    background-color:black; /* Cambia esto al color que desees */
+    background-color:rgb(44, 44, 44); /* Cambia esto al color que desees */
 }
 .custom-bg {
     background-color:gray; /* Cambia esto al color que desees */
@@ -29,8 +31,7 @@ main {
 
 .custom-text {
     color: hsl(16, 100%, 50%);
-    font-weight: bold;
-    font-size:x-large;
+    font-size:large;
 }
 
 .custom-text:active,
@@ -55,6 +56,5 @@ main {
     color: black; /* Cambia esto al color que desees para el texto */
     /* Cambia el tipo de letra (fuente) */
     font-family: 'Arial', sans-serif; /* Cambia 'Arial' a la fuente que desees */
-    font-weight: bold;
     font-size: medium;
 }
