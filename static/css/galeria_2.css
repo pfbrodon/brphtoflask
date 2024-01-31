@@ -21,14 +21,25 @@ h1{
     box-sizing: border-box;
     border-color: #1f1e1e;
     border-radius: 8px;
-    padding: 3px;
+    padding: 5px;
+    overflow: hidden; /* Para que las esquinas redondeadas se apliquen correctamente */
+    position: relative;
     box-shadow: 0 4px 8px rgb(0, 0, 0);
+    transition: box-shadow 0.3s ease; /* Transición suave para el efecto de sombra */
+}
+.galeria .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Efecto de sombra al pasar el ratón */
+    /*transform: scale(1.1); /* Efecto de escala al pasar el ratón */
+
 }
 
 .galeria .card  img {
     width: 80%;
     border-radius: 8px;
-    background-color: #000000;
+    transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+}
+.galeria .card:hover img {
+    transform: scale(1.1); /* Efecto de escala al pasar el ratón */
 }
 
 .card-body {
