@@ -5,6 +5,7 @@ body {
 }
 main {
     font-family: "Sukhumvit Set", sans-serif;
+    color: black;
     background-color:rgb(44, 44, 44); /* Cambia el color según tus preferencias */
     padding: 20px; /* Ajusta el relleno según tus necesidades */
 }
