@@ -59,3 +59,35 @@ main {
     font-family: 'Arial', sans-serif; /* Cambia 'Arial' a la fuente que desees */
     font-size: medium;
 }
+
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow: auto;
+}
+
+.modal-content {
+    max-width: 80%;
+    margin: auto;
+    display: block;
+}
+
+/* Estilos adicionales para cerrar el modal */
+.close {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
