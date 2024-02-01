@@ -56,3 +56,40 @@ h1{
     margin: auto;
     display: block;
 }
+
+/* Agrega estilos para el modal */
+.modal {
+    display:flex;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display:block;
+    max-width: 60%;
+    max-height:fit-content;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#caption {
+    text-align: center;
+    color: #fff;
+    margin-top: 10px;
+}

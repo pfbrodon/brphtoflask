@@ -15,7 +15,7 @@
             <div class="galeria">
                 {% for imagen in imagenes %}
                 <!--<img src="{{ url_for('static', filename='images/' + imagen) }}" alt="{{ imagen }}">-->
-                <div class="card">
+                <div class="card" onclick="abrirModal('{{ url_for('static', filename='images/' + imagen) }}','{{ imagen }}')" >
                     <img src="{{ url_for('static', filename='images/' + imagen) }}" alt="{{ imagen }}"
                         class="card-img-top" alt="...">
                     <!--<div class="card-body">
@@ -28,4 +28,26 @@
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal" id="myModal">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <img class="modal-content" id="imgModal">
+    <div id="caption"></div>
+</div>
+
+<script>
+    function abrirModal(url, nombre) {
+        var modal = document.getElementById('myModal');
+        var img = document.getElementById('imgModal');
+        var captionText = document.getElementById('caption');
+
+        modal.style.display = 'block';
+        img.src = url;
+        captionText.innerHTML = nombre;
+    }
+
+    function cerrarModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+</script>
 {%endblock%}
