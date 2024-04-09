@@ -53,6 +53,30 @@ def galeria_3():
     # Renderizar la plantilla con la lista de imágenes
     return render_template('galeria_3.html', imagenes=imagenes)
 
+@app.route('/galeria_4')
+def galeria_4():
+    # Ruta de la carpeta de imágenes
+    ruta_imagenes = os.path.join(app.static_folder, 'images')
+
+    # Obtener la lista de nombres de archivo de imágenes
+    imagenes = [imagen for imagen in os.listdir(ruta_imagenes) if imagen.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
+    print(imagenes)
+    # Renderizar la plantilla con la lista de imágenes
+    return render_template('galeria_4.html', imagenes=imagenes)
+
+@app.route('/galeria_5')
+def galeria_5():
+    # Ruta de la carpeta de imágenes
+    ruta_imagenes = os.path.join(app.static_folder, 'images')
+
+    # Obtener la lista de nombres de archivo de imágenes
+    imagenes = [imagen for imagen in os.listdir(ruta_imagenes) if imagen.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
+    print(imagenes)
+    # Renderizar la plantilla con la lista de imágenes
+    return render_template('galeria_5.html', imagenes=imagenes)
+
+
+
 
 if __name__=='__main__':  
     app.run(debug=True, port=5000)    # ejecuta el servidor Flask en el puerto 5000
