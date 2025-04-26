@@ -80,4 +80,3 @@ def galeria_5():
 
 if __name__=='__main__':  
     app.run(host="0.0.0.0", debug=True, port=5000)    # ejecuta el servidor Flask en el puerto 5000, host="0.0.0.0"<-- para acceder desde cualquier IP, debug=True para ver errores en la consola
-
