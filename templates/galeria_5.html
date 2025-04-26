@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/galeria_5.css') }}"> {% extends 'layout.html' %} {% block body %}
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <H1>Galeria 5</H1>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-10">
+            <div class="galeria">
+                {% for imagen in imagenes %}
+                <!--<img src="{{ url_for('static', filename='images/' + imagen) }}" alt="{{ imagen }}">-->
+                <div class="card" onclick="abrirModal('{{ url_for('static', filename = 'images/' + imagen) }}','{{ imagen }}')">
+                    <img src="{{ url_for('static', filename='images/' + imagen) }}" alt="{{ imagen }}" class="card-img-top" alt="...">
+                    <!--<div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>-->
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal" id="myModal">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <img class="modal-content" id="imgModal">
+    <div id="caption"></div>
+</div>
+
+<script>
+    function abrirModal(url, nombre) {
+        var modal = document.getElementById('myModal');
+        var img = document.getElementById('imgModal');
+        var captionText = document.getElementById('caption');
+
+        modal.style.display = 'block';
+        img.src = url;
+        captionText.innerHTML = nombre;
+    }
+
+    function cerrarModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+</script>
+{%endblock%}
