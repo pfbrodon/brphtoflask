@@ -1,4 +1,10 @@
-{% extends 'layout.html' %} {% block body %}
+{% extends 'layout_galeria.html' %} 
+{% block head%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{%endblock%}
+
+{% block body %}
 <div class="container"><P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, fugiat unde saepe cum totam ex dolor recusandae magni
     impedit excepturi, atque obcaecati quibusdam veritatis! Blanditiis, dolore unde? Ipsum ullam doloribus omnis porro
     nam blanditiis deleniti natus laborum ex cumque ad beatae error sed veniam, voluptates, ut nisi? Minus expedita, ab

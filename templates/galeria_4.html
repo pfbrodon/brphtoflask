@@ -1,4 +1,10 @@
-<link rel="stylesheet" href="{{ url_for('static', filename='css/galeria_4.css') }}"> {% extends 'layout.html' %} {% block body %}
+{% extends 'layout_galeria.html' %}
+{% block head%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/galeria_4.css') }}">
+{%endblock%}
+
+{% block body %}
 <br>
 <br>
 <br>
@@ -13,13 +19,8 @@
         <div class="col-md-10">
             <div class="galeria">
                 {% for imagen in imagenes %}
-                <!--<img src="{{ url_for('static', filename='images/' + imagen) }}" alt="{{ imagen }}">-->
-                <div class="card" onclick="abrirModal('{{ url_for('static', filename = 'images/galeria4/' + imagen) }}','{{ imagen }}')">
-                    <img src="{{ url_for('static', filename='images/galeria4/' + imagen) }}" alt="{{ imagen }}" class="card-img-top" alt="...">
-                    <!--<div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>-->
+                <div class="card" onclick="abrirModal('{{ url_for('static', filename ='images/galeria4/' + imagen) }}','{{ imagen }}')">
+                    <img src="{{ url_for('static', filename='images/galeria4/' + imagen) }}" alt="{{ imagen }}" class="card-img-top" >
                 </div>
                 {% endfor %}
             </div>
@@ -29,7 +30,7 @@
 <!-- Modal -->
 <div class="modal" id="myModal">
     <span class="close" onclick="cerrarModal()">&times;</span>
-    <img class="modal-content" id="imgModal">
+    <img class="modal-content" id="imgModal" src="" alt="Imagen ampliada">
     <div id="caption"></div>
 </div>
 

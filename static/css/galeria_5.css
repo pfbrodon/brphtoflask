@@ -1,3 +1,65 @@
+
+body {
+    font-family: "Sukhumvit Set", sans-serif;
+    background-color: rgb(44, 44, 44);
+}
+main {
+    font-family: "Sukhumvit Set", sans-serif;
+    color: black;
+    background-color:rgb(44, 44, 44); /* Cambia el color según tus preferencias */
+    padding: 20px; /* Ajusta el relleno según tus necesidades */
+}
+
+.navbar {
+    height: 100px; /* Ajusta la altura según tus necesidades */
+}
+
+.custom-navbar {
+    background-color:rgb(44, 44, 44); /* Cambia esto al color que desees */
+}
+.custom-bg {
+    background-color:gray; /* Cambia esto al color que desees */
+    color: hsl(16, 100%, 50%);
+    border: 2px solid red; /* Cambia esto al color que desees para las líneas */
+}
+.custom-toggler-icon {
+    color: red; /* Cambia esto al color que desees para las líneas del icono */
+}
+
+.custom-text:hover {
+    color: gray; /* Cambia esto al color que desees al pasar el puntero */
+}
+
+.custom-text {
+    color: hsl(16, 100%, 50%);
+    font-size:large;
+}
+
+.custom-text:active,
+.custom-text:focus {
+    color: gray;
+}
+
+
+
+/* Clase personalizada para cambiar el color de fondo del menú desplegable */
+.dropdown-menu {
+    background-color: gray; /* Cambia esto al color que desees para el fondo del menú */
+}
+.dropdown-menu ::selection {
+    background-color: gray; /* Cambia esto al color que desees para la selección del texto */
+    color: darkgrey; /* Cambia esto al color que desees para el texto seleccionado */
+}
+
+
+.dropdown-menu .custom-text {
+    /* Establece el color del texto */
+    color: black; /* Cambia esto al color que desees para el texto */
+    /* Cambia el tipo de letra (fuente) */
+    font-family: 'Arial', sans-serif; /* Cambia 'Arial' a la fuente que desees */
+    font-size: medium;
+}
+
 .col {
     text-align: center;
 }
@@ -23,29 +85,31 @@ h1 {
     /*border-color: #1f1e1e;*/
     border-radius: 8px;
     border: none;
-    padding: 5px;
+    padding:10px;
     /*overflow: hidden;*
     /* Para que las esquinas redondeadas se apliquen correctamente */
     position: relative;
-    /*box-shadow: 0 4px 8px rgb(0, 0, 0);
+    /*box-shadow: 0 4px 8px rgb(0, 0, 0);*/
     transition: box-shadow 0.3s ease;
     /* Transición suave para el efecto de sombra */
 }
 
 .galeria .card img {
-    width: 80%;
-    border-radius: 8px;
+    width: 75%;
+    border-radius: 4px;
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
     /* Transición suave para el efecto de escala */
 }
 
 .galeria .card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.03);
     /* Efecto de escala al pasar el ratón */
 }
 
 .card-body {
-    padding: 10px;
+    padding: 15
+    px;
     background-color: rgb(44, 44, 44);
     border-radius: 6px;
 }
@@ -58,43 +122,4 @@ h1 {
 .card-img-top {
     margin: auto;
     display: block;
-}
-
-
-/* Agrega estilos para el modal */
-
-.modal {
-    display: flex;
-    position: fixed;
-    z-index: 1;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 60%;
-    max-height: fit-content;
-}
-
-.close {
-    color: white;
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#caption {
-    text-align: center;
-    color: #fff;
-    margin-top: 10px;
 }

@@ -1,4 +1,10 @@
-{% extends 'layout.html' %} {% block body %}
+{% extends 'layout_galeria.html' %}
+{% block head%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/destacados.css') }}">
+{%endblock%}
+
+{% block body %}
 <br>
 <br>
 <br>
