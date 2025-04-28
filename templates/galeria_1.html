@@ -15,11 +15,11 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active align-items-center">
-                        <img src="{{ url_for('static', filename='images/' + imagenes[0]) }}" class="d-block mx-auto" alt="...">
+                        <img src="{{ url_for('static', filename='images/galeria1/' + imagenes[0]) }}" class="d-block mx-auto" alt="...">
                     </div>
                     {% for imagen in imagenes %}
                     <div class="carousel-item align-items-center">
-                        <img src="{{ url_for('static', filename='images/' + imagen) }}" class="d-block mx-auto" alt="...">
+                        <img src="{{ url_for('static', filename='images/galeria1/' + imagen) }}" class="d-block mx-auto" alt="...">
                     </div>
                     {% endfor %}
                 </div>

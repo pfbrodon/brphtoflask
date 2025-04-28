@@ -23,7 +23,7 @@ def contacto():
 @app.route('/galeria_1')
 def galeria_1():
     # Ruta de la carpeta de imágenes
-    ruta_imagenes = os.path.join(app.static_folder, 'images')
+    ruta_imagenes = os.path.join(app.static_folder, 'images/galeria1/')
 
     # Obtener la lista de nombres de archivo de imágenes
     imagenes = [imagen for imagen in os.listdir(ruta_imagenes) if imagen.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
@@ -34,7 +34,7 @@ def galeria_1():
 @app.route('/galeria_2')
 def galeria_2():
     # Ruta de la carpeta de imágenes
-    ruta_imagenes = os.path.join(app.static_folder, 'images')
+    ruta_imagenes = os.path.join(app.static_folder, 'images/galeria2')
 
     # Obtener la lista de nombres de archivo de imágenes
     imagenes = [imagen for imagen in os.listdir(ruta_imagenes) if imagen.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
@@ -45,7 +45,7 @@ def galeria_2():
 @app.route('/galeria_3')
 def galeria_3():
     # Ruta de la carpeta de imágenes
-    ruta_imagenes = os.path.join(app.static_folder, 'images')
+    ruta_imagenes = os.path.join(app.static_folder, 'images/galeria3')
 
     # Obtener la lista de nombres de archivo de imágenes
     imagenes = [imagen for imagen in os.listdir(ruta_imagenes) if imagen.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
@@ -56,7 +56,7 @@ def galeria_3():
 @app.route('/galeria_4')
 def galeria_4():
     # Ruta de la carpeta de imágenes
-    ruta_imagenes = os.path.join(app.static_folder, 'images')
+    ruta_imagenes = os.path.join(app.static_folder, 'images/galeria4')
 
     # Obtener la lista de nombres de archivo de imágenes
     imagenes = [imagen for imagen in os.listdir(ruta_imagenes) if imagen.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
@@ -67,7 +67,7 @@ def galeria_4():
 @app.route('/galeria_5')
 def galeria_5():
     # Ruta de la carpeta de imágenes
-    ruta_imagenes = os.path.join(app.static_folder, 'images')
+    ruta_imagenes = os.path.join(app.static_folder, 'images/galeria5')
 
     # Obtener la lista de nombres de archivo de imágenes
     imagenes = [imagen for imagen in os.listdir(ruta_imagenes) if imagen.endswith(('.jpg', '.jpeg', '.png', '.gif'))]
