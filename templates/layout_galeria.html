@@ -12,46 +12,44 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg custom-navbar fixed-top border-bottom">
-            <div class="container-fluid">
-                <a class="navbar-brand custom-text" href="#">BT Photo</a>
-                <button class="navbar-toggler custom-bg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon custom-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link custom-text" aria-current="page" href="{{ url_for('home') }}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-text" href="{{ url_for('destacados') }}">Destacados</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-text" href="{{ url_for('contacto') }}">Contacto</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle  custom-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Galerias
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_1') }}">Nocturnas Urbanas</a>
-                                </li>
-                                <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_2') }}">Hibridos</a>
-                                </li>
-                                <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_3') }}">Nocturnas Urbanas</a>
-                                </li>
-                                <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_4') }}">Viajeros del Aire</a>
-                                </li>
-                                <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_5') }}">Muro Horizontal (pisos)</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand custom-text" href="#">BT Photo</a>
+            <button class="navbar-toggler custom-bg" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon custom-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link custom-text" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-text" href="{{ url_for('destacados') }}">Destacados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-text" href="{{ url_for('contacto') }}">Contacto</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle  custom-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Galerias
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_1') }}">Nocturnas Urbanas</a>
+                            </li>
+                            <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_2') }}">Hibridos</a>
+                            </li>
+                            <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_3') }}">Nocturnas Urbanas</a>
+                            </li>
+                            <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_4') }}">Viajeros del Aire</a>
+                            </li>
+                            <li><a class="dropdown-item custom-text" href="{{ url_for('galeria_5') }}">Muro Horizontal (pisos)</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
     <main>
         {% block body %} {% endblock %}
     </main>
