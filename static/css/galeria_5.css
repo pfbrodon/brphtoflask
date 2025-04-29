@@ -32,7 +32,8 @@ main {
 
 .custom-text {
     color: hsl(16, 100%, 50%);
-    font-size:large;
+    font-size: 1.3rem;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra negra */
 }
 
 .custom-text:active,
@@ -169,4 +170,13 @@ h1 {
     background: none;
     border: none;
     outline: none;
+}
+
+
+#tituloGaleria {
+    color: hsl(16, 100%, 50%);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el título y la galería */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra negra */
 }

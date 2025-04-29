@@ -27,7 +27,7 @@ main {
 }
 
 .custom-text:hover {
-    color: gray; /* Cambia esto al color que desees al pasar el puntero */
+    color: rgb(128, 128, 128); /* Cambia esto al color que desees al pasar el puntero */
 }
 
 .custom-text {

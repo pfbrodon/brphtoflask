@@ -1,5 +1,10 @@
-<link rel="stylesheet" href="{{ url_for('static', filename='css/galeria_1.css') }}">
-{% extends 'layout.html' %} {% block body %}
+{% extends 'layout_galeria.html' %}
+{% block head%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/galeria_1.css') }}">
+{%endblock%}
+
+{% block body %}
 <br>
 <br>
 <br>
@@ -7,34 +12,40 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <H1>Galeria 1</H1>
+            <H1 id="tituloGaleria">Galeria 1</H1>
         </div>
     </div>
     <div class="row justify-content-center align-items-center">
         <div class="col-md-10">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active align-items-center">
-                        <img src="{{ url_for('static', filename='images/galeria1/' + imagenes[0]) }}" class="d-block mx-auto" alt="...">
-                    </div>
-                    {% for imagen in imagenes %}
-                    <div class="carousel-item align-items-center">
-                        <img src="{{ url_for('static', filename='images/galeria1/' + imagen) }}" class="d-block mx-auto" alt="...">
-                    </div>
-                    {% endfor %}
+            <div class="galeria">
+                {% for imagen in imagenes %}
+                <div class="card" onclick="abrirModal('{{ url_for('static', filename ='images/galeria1/' + imagen) }}','{{ imagen }}')">
+                    <img src="{{ url_for('static', filename='images/galeria1/' + imagen) }}" alt="{{ imagen }}" class="card-img-top" >
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div id="myModal">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <img  id="imgModal" src="" alt="Imagen ampliada">
+    <div id="caption"></div>
+</div>
+<script>
+    function abrirModal(url, nombre) {
+        var modal = document.getElementById('myModal');
+        var img = document.getElementById('imgModal');
+        var captionText = document.getElementById('caption');
+
+        modal.style.display = 'block';
+        img.src = url;
+        captionText.innerHTML = nombre;
+    }
+
+    function cerrarModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+</script>
 {%endblock%}
