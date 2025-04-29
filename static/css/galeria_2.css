@@ -27,12 +27,13 @@ main {
 }
 
 .custom-text:hover {
-    color: rgb(128, 128, 128); /* Cambia esto al color que desees al pasar el puntero */
+    color: gray; /* Cambia esto al color que desees al pasar el puntero */
 }
 
 .custom-text {
     color: hsl(16, 100%, 50%);
-    font-size:large;
+    font-size: 1.3rem;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra negra */
 }
 
 .custom-text:active,
@@ -139,13 +140,13 @@ h1 {
 }
 
 #imgModal {
-    max-width: 90%; /* Máximo ancho: 90% del ancho visible */
-    max-height: 90%; /* Máximo alto: 90% del alto visible */
-    object-fit: contain; /* Ajusta la imagen sin deformarla */
-    border: none;
-    display: block;
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    margin-top: 20px; /* Ajusta la posición vertical de la imagen */
+        max-width: 100%; /* Máximo ancho: 90% del ancho visible */
+        max-height: 100%; /* Máximo alto: 90% del alto visible */
+        object-fit: contain; /* Ajusta la imagen sin deformarla */
+        border: 2px solid #0f0b0b; /* Borde blanco para la imagen */
+        display: block;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+        margin-top: 30px; /* Ajusta la posición vertical de la imagen */
 }
 
 #caption {
@@ -169,4 +170,13 @@ h1 {
     background: none;
     border: none;
     outline: none;
+}
+
+
+#tituloGaleria {
+    color: hsl(16, 100%, 50%);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el título y la galería */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra negra */
 }
