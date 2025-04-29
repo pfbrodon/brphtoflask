@@ -123,3 +123,50 @@ h1 {
     margin: auto;
     display: block;
 }
+#myModal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    z-index: 1050; /* Nivel de superposición */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Ocupa todo el ancho visible */
+    height: 100vh; /* Ocupa todo el alto visible */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Apila los elementos en columna */
+    overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+#imgModal {
+    max-width: 90%; /* Máximo ancho: 90% del ancho visible */
+    max-height: 90%; /* Máximo alto: 90% del alto visible */
+    object-fit: contain; /* Ajusta la imagen sin deformarla */
+    border: none;
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    margin-top: 20px; /* Ajusta la posición vertical de la imagen */
+}
+
+#caption {
+    text-align: center;
+    color: #fff; /* Texto blanco para contraste */
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    max-width: 90%; /* Asegura que el texto no exceda el ancho de la imagen */
+    word-wrap: break-word; /* Permite que el texto se ajuste si es muy largo */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.close {
+    position: absolute;
+    top: 10px; /* Posición desde la parte superior */
+    right: 20px; /* Posición desde la parte derecha */
+    color: white;
+    font-size: 30px; /* Tamaño del botón */
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
