@@ -11,3 +11,4 @@ RUN pip install -r requirements.txt
 COPY ./ ./
 
 CMD ["python", "app.py"]
+#CMD ["uwsgi", "--ini", "uwsgi.ini"] # Para Produccion

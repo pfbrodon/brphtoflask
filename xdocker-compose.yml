@@ -10,7 +10,7 @@ services:
       - ./:/app
     environment:
       - FLASK_APP=app.py
-      - FLASK_DEBUG=1
+      - FLASK_DEBUG=1 # Desactivar con numero 0 para producción
   nginx:
     image: nginx:1.25.4-alpine
     container_name: nginxbtphoflask
