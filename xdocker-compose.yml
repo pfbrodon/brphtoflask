@@ -8,12 +8,12 @@ services:
       - "5000:5000"  # Map host port 5000 to container port 5000
     volumes:
       - ./:/app
-    environment:
-      - FLASK_APP=app.py
-      - FLASK_DEBUG=1 # Desactivar con numero 0 para producción
+    #environment:
+    #  - FLASK_APP=app.py
+    #  - FLASK_DEBUG=0 # Desactivar con numero 0 para producción
   nginx:
     image: nginx:1.27.5-alpine
-    container_name: nginxbtphoflask
+    container_name: nginxbtphotoflask
     restart: always
     ports:
       - '8088:8080'
