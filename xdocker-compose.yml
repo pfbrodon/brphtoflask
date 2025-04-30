@@ -1,7 +1,7 @@
 version:  '3.8'
 services:
   app:
-    image: brphotoflask:v0.01
+    image: brphotoflask:v0.02
     container_name: btphotoflask
     restart: unless-stopped
     ports:
