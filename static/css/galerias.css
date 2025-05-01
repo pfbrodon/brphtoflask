@@ -1,11 +1,10 @@
-
 body {
     font-family: "Sukhumvit Set", sans-serif;
     background-color: rgb(44, 44, 44);
 }
 main {
     font-family: "Sukhumvit Set", sans-serif;
-    color: black;
+    color: hsl(34, 59%, 46%);
     background-color:rgb(44, 44, 44); /* Cambia el color según tus preferencias */
     padding: 20px; /* Ajusta el relleno según tus necesidades */
 }
@@ -19,11 +18,11 @@ main {
 }
 .custom-bg {
     background-color:gray; /* Cambia esto al color que desees */
-    color: hsl(16, 100%, 50%);
-    border: 2px solid red; /* Cambia esto al color que desees para las líneas */
+    color: lab(56.64% 31.17 54.33);
+    border: 2px solid hwb(27 15% 30%); /* Cambia esto al color que desees para las líneas */
 }
 .custom-toggler-icon {
-    color: red; /* Cambia esto al color que desees para las líneas del icono */
+    color: lab(59% 40.09 54.16); /* Cambia esto al color que desees para las líneas del icono */
 }
 
 .custom-text:hover {
@@ -31,42 +30,69 @@ main {
 }
 
 .custom-text {
-    color: hsl(16, 100%, 50%);
+    color: hsl(34, 62%, 36%);
     font-size: 1.3rem;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra negra */
+    font-family: "Sukhumvit Set", sans-serif; /* Cambia 'Arial' a la fuente que desees */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.8); /* Sombra negra */
 }
 
 .custom-text:active,
 .custom-text:focus {
-    color: gray;
+    color: #d45704;
 }
 
 
 
 /* Clase personalizada para cambiar el color de fondo del menú desplegable */
 .dropdown-menu {
-    background-color: gray; /* Cambia esto al color que desees para el fondo del menú */
+    background-color: hwb(0 20% 80%); /* Cambia esto al color que desees para el fondo del menú */
+    font-size: 0.5rem; /* Ajusta el tamaño de la fuente */
 }
 .dropdown-menu ::selection {
-    background-color: gray; /* Cambia esto al color que desees para la selección del texto */
-    color: darkgrey; /* Cambia esto al color que desees para el texto seleccionado */
+    background-color: hsla(22, 71%, 49%, 0.829); /* Cambia esto al color que desees para la selección del texto */
+    color: hwb(14 0% 0% / 0.795); /* Cambia esto al color que desees para el texto seleccionado */
+}
+.dropdown-menu a,
+.dropdown-menu button {
+    font-size: 1.1rem; /* Ajusta el tamaño de la fuente para los elementos interactivos */
 }
 
-
-.dropdown-menu .custom-text {
-    /* Establece el color del texto */
-    color: black; /* Cambia esto al color que desees para el texto */
-    /* Cambia el tipo de letra (fuente) */
-    font-family: 'Arial', sans-serif; /* Cambia 'Arial' a la fuente que desees */
-    font-size: medium;
+.dropdown-menu a:focus,
+.dropdown-menu button:focus {
+    background-color: hsl(34, 32%, 38%); /* Cambia esto al color que desees para el fondo al hacer focus */
+    color:  hsla(22, 100%, 50%, 0.829); /* Cambia esto al color del texto al hacer focus */
+    outline: none; /* Elimina el borde de enfoque predeterminado si es necesario */
 }
-
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+    background-color: #c55f24; /* Fondo blanco al pasar el puntero */
+    color: black; /* Cambia el color del texto al negro para contraste */
+    outline: none; /* Elimina el borde de enfoque si es necesario */
+}
 .col {
     text-align: center;
 }
 
 h1 {
     color: #000000;
+}
+
+.dropdown-menu:focus {
+    background-color: hsl(34, 62%, 36%); /* Cambia esto al color que desees para el fondo al hacer focus */
+    color: #ff0202; /* Cambia esto al color del texto al hacer focus */
+    outline: none; /* Elimina el borde de enfoque predeterminado si es necesario */
+}
+
+
+#tituloGaleria {
+    color: hsl(34, 62%, 36%);
+    font-size: 2.5rem;
+    font-family: "Sukhumvit Set";
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el título y la galería */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra negra */
 }
 
 .galeria {
@@ -170,13 +196,4 @@ h1 {
     background: none;
     border: none;
     outline: none;
-}
-
-
-#tituloGaleria {
-    color: hsl(16, 100%, 50%);
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px; /* Espacio entre el título y la galería */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra negra */
 }
