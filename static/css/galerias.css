@@ -16,17 +16,19 @@ main {
 .custom-navbar {
     background-color:rgb(44, 44, 44); /* Cambia esto al color que desees */
 }
+.navbar-collapse {
+    background-color: hsl(0, 0%, 26%); /* Cambia esto al color que desees del menú desplegable principal   */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px; /* Espacio interno */
+    border: #0f0b0b;
+}
 .custom-bg {
     background-color:gray; /* Cambia esto al color que desees */
     color: lab(56.64% 31.17 54.33);
-    border: 2px solid hwb(27 15% 30%); /* Cambia esto al color que desees para las líneas */
+    border: 1px solid hwb(27 15% 30%); /* Cambia esto al color que desees para las líneas */
 }
-.custom-toggler-icon {
-    color: lab(59% 40.09 54.16); /* Cambia esto al color que desees para las líneas del icono */
-}
-
 .custom-text:hover {
-    color: gray; /* Cambia esto al color que desees al pasar el puntero */
+    color: hsl(44, 50%, 46%); /* Cambia esto al color que desees al pasar el puntero */
 }
 
 .custom-text {
@@ -39,19 +41,26 @@ main {
 
 .custom-text:active,
 .custom-text:focus {
-    color: #d45704;
+    color: lch(52.93% 46.65 57.43); /* Cambia esto al color que desees al hacer clic o al enfocar */
 }
 
+button:focus,
+button:active {
+    background-color: hsl(34, 62%, 36%); /* Cambia esto al color que desees para el fondo */
+    color: #b8862b; /* Cambia el color del texto */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+    border: 1px solid hsl(34, 62%, 46%); /* Agrega un borde para resaltar el botón */
+}
 
 
 /* Clase personalizada para cambiar el color de fondo del menú desplegable */
 .dropdown-menu {
-    background-color: hwb(0 20% 80%); /* Cambia esto al color que desees para el fondo del menú */
+    background-color: lch(32.75% 0 296.81); /* Cambia esto al color que desees para el fondo del menú */
     font-size: 0.5rem; /* Ajusta el tamaño de la fuente */
 }
 .dropdown-menu ::selection {
     background-color: hsla(22, 71%, 49%, 0.829); /* Cambia esto al color que desees para la selección del texto */
-    color: hwb(14 0% 0% / 0.795); /* Cambia esto al color que desees para el texto seleccionado */
+    color: lab(90.21% -65.48 86.19 / 0.795); /* Cambia esto al color que desees para el texto seleccionado */
 }
 .dropdown-menu a,
 .dropdown-menu button {
@@ -66,17 +75,14 @@ main {
 }
 .dropdown-menu a:hover,
 .dropdown-menu button:hover {
-    background-color: #c55f24; /* Fondo blanco al pasar el puntero */
-    color: black; /* Cambia el color del texto al negro para contraste */
+    background-color: hwb(0 13% 86%); /* Fondo blanco al pasar el puntero */
+    color: rgb(224, 120, 72); /* Cambia el color del texto al negro para contraste */
     outline: none; /* Elimina el borde de enfoque si es necesario */
 }
 .col {
     text-align: center;
 }
 
-h1 {
-    color: #000000;
-}
 
 .dropdown-menu:focus {
     background-color: hsl(34, 62%, 36%); /* Cambia esto al color que desees para el fondo al hacer focus */
@@ -87,7 +93,7 @@ h1 {
 
 #tituloGaleria {
     color: hsl(34, 62%, 36%);
-    font-size: 2.5rem;
+    font-size: 12;
     font-family: "Sukhumvit Set";
     font-weight: bold;
     text-align: center;
@@ -119,6 +125,19 @@ h1 {
     /*box-shadow: 0 4px 8px rgb(0, 0, 0);*/
     transition: box-shadow 0.3s ease;
     /* Transición suave para el efecto de sombra */
+}
+@media (max-width: 768px) {
+    .galeria .card {
+        width: calc(50% - 10px); /* 2 columnas para tablets */
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria .card {
+        width: calc(50% - 10px); /* 2 columnas para celulares */
+        margin-bottom: 10px;
+    }
 }
 
 .galeria .card img {
