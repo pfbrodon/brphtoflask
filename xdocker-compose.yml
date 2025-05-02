@@ -1,19 +1,19 @@
 version:  '3.8'
 services:
   app:
-    image: brphotoflask:v0.02
-    container_name: btphotoflask
+    image: uwsgibtphoto:v0.03
+    container_name: uwsgibtphoto
     restart: unless-stopped
     ports:
       - "5000:5000"  # Map host port 5000 to container port 5000
     volumes:
       - ./:/app
-    #environment:
-    #  - FLASK_APP=app.py
-    #  - FLASK_DEBUG=0 # Desactivar con numero 0 para producción
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_DEBUG=0 # Desactivar con numero 0 para producción
   nginx:
     image: nginx:1.27.5-alpine
-    container_name: nginxbtphotoflask
+    container_name: nginxbtphoflask
     restart: always
     ports:
       - '8088:8080'
@@ -22,3 +22,4 @@ services:
       - ./static:/static
     depends_on:
       - app
+

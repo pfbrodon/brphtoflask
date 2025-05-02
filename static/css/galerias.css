@@ -173,6 +173,7 @@ h1 {
         display: block;
         margin: 0 auto; /* Centra la imagen horizontalmente */
         margin-top: 30px; /* Ajusta la posición vertical de la imagen */
+        padding: 10px; /* Espacio interno alrededor de la imagen */
 }
 
 #caption {

@@ -4,11 +4,13 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
+RUN apk add --no-cache gcc musl-dev linux-headers python3-dev
+
 COPY ./requirements.txt ./
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./ ./
 
-CMD ["python", "app.py"]
-#CMD ["uwsgi", "--ini", "uwsgi.ini"] # Para Produccion
+#CMD ["python", "app.py"]
+CMD ["uwsgi", "--ini", "uwsgi.ini"]
