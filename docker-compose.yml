@@ -19,6 +19,8 @@ services:
       - "5000:5000"  # Map host port 5000 to container port 5000
     volumes:
       - ./:/app
+      - ./static:/app/static # Montar el directorio estático en el contenedor
+      - ./templates:/app/templates # Montar el directorio de plantillas en el contenedor
     environment:
       - FLASK_APP=app.py
       - FLASK_DEBUG=0 # Desactivar con numero 0 para producción
