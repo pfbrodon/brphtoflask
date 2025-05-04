@@ -17,7 +17,7 @@ main {
     background-color:rgb(44, 44, 44); /* Cambia esto al color que desees */
 }
 .navbar-collapse {
-    background-color: hsl(0, 0%, 26%); /* Cambia esto al color que desees del menú desplegable principal   */
+    background-color: rgb(44,44,44); /* Cambia esto al color que desees del menú desplegable principal   */
     border-radius: 4px; /* Bordes redondeados */
     padding: 10px; /* Espacio interno */
     border: #0f0b0b;
