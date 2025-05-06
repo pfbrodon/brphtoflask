@@ -14,7 +14,7 @@ main {
 }
 
 .navbar {
-    height: 100px; /* Ajusta la altura según tus necesidades */
+    height: 70px; /* Ajusta la altura según tus necesidades */
     border-bottom: 2px solid hsl(34, 62%, 36%) !important; /* Borde inferior rojo de 4px */
 }
 
