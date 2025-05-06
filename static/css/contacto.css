@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Sukhumvit Set";
+    src: url("fonts/sukhumvitset-thin.ttf") format("truetype");
+}
 body {
     font-family: "Sukhumvit Set", sans-serif;
     background-color: rgb(44, 44, 44);
@@ -8,7 +12,7 @@ main {
     background-color:rgb(44, 44, 44); /* Cambia el color según tus preferencias */
     padding: 20px; /* Ajusta el relleno según tus necesidades */
 }
-
+/* ------------------------------------------------------------------------------------------------------------------- */
 .navbar {
     height: 100px; /* Ajusta la altura según tus necesidades */
     border-bottom: 2px solid hsl(34, 62%, 36%) !important; /* Borde inferior rojo de 4px */
@@ -84,12 +88,7 @@ button:active {
     text-align: center;
 }
 
-
-.dropdown-menu:focus {
-    background-color: hsl(34, 62%, 36%); /* Cambia esto al color que desees para el fondo al hacer focus */
-    color: #ff0202; /* Cambia esto al color del texto al hacer focus */
-    outline: none; /* Elimina el borde de enfoque predeterminado si es necesario */
-}
+/* ------------------------------------------------------------------------------------------------------------------- */
 
 #tituloGaleria {
     color: hsl(34, 62%, 36%);

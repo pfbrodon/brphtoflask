@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: "Sukhumvit Set";
+    src: url("fonts/sukhumvitset-thin.ttf") format("truetype");
+}
 body {
     font-family: "Sukhumvit Set", sans-serif;
     background-color: rgb(44, 44, 44);
